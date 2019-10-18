@@ -19,15 +19,19 @@ fetch(url)
         // console.log(photos)
         console.log(photos[0].id);
 
-
+        //it works to fetch the id but it prompted Uncaught (in promise) TypeError: Cannot read property 'id' of undefined
         for(let i = 0; i <= photos.length; i++){
             console.log(photos[i].id);
         }
 
+        //this for each loop doesnt work when i console.log(photo[i].id)
         // photos.forEach(function (photo) {
         //     console.log(photo);
         // })
-
+        
+        for (let photo in photos){
+            alert(photo);
+        }
 
     })
 
